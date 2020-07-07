@@ -1,0 +1,14 @@
+// https://www.npmjs.com/package/eslint-config-airbnb-base
+{
+  "extends": [
+    "airbnb-base",
+    "plugin:promise/recommended",
+    "plugin:unicorn/recommended",
+    "prettier",
+    "prettier/unicorn"
+  ],
+  "rules": {
+    "import/extensions": ["error", "never", { "js": "always" }],
+    "unicorn/no-fn-reference-in-iterator": "off"
+  }
+}

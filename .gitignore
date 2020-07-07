@@ -1,0 +1,11 @@
+# dependencies
+/node_modules
+
+# development
+*.log
+
+# misc
+.DS_Store
+.env*
+*.json
+!package.json
