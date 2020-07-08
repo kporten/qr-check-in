@@ -1,8 +1,10 @@
 import pino from 'pino';
 
+import getEnvironment from './environment.js';
+
 const logger = pino({
   prettyPrint:
-    process.env.NODE_ENV === 'production'
+    getEnvironment().NODE_ENV === 'production'
       ? false
       : {
           colorize: true,

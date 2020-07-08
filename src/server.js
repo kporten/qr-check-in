@@ -3,10 +3,11 @@ import helmet from 'helmet';
 import pinoHttp from 'pino-http';
 import emoji from 'node-emoji';
 
+import { databaseUrl } from './helpers/database.js';
 import logger from './helpers/pino.js';
+import getEnvironment from './helpers/environment.js';
 import controllerUsers from './controllers/users.js';
 
-const port = process.env.PORT || 3000;
 const app = express();
 
 const pinoMiddleware = pinoHttp({
@@ -29,6 +30,10 @@ app.get('/', (request, response) => {
 
 app.use('/users', controllerUsers);
 
-app.listen(port, () => {
-  logger.info(`Server running on port ${port}`);
+app.listen(getEnvironment().PORT, () => {
+  logger.info(`Server running on port ${getEnvironment().PORT}`);
+  logger.info(`Database URL is ${databaseUrl}`);
+  logger.info(
+    `Datetime format is ${getEnvironment().DATETIME_FORMAT || 'ISO 8601'}`,
+  );
 });
