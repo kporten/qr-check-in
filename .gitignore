@@ -6,6 +6,6 @@
 
 # misc
 .DS_Store
-.env*
+.env
 *.json
 !package.json
