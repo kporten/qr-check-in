@@ -1,5 +1,6 @@
 import { nanoid } from 'nanoid';
 import moment from 'moment';
+import uniqWith from 'lodash/uniqWith.js';
 
 import database from '../helpers/database.js';
 import getEnvironment from '../helpers/environment.js';
@@ -30,10 +31,12 @@ export const addHistory = async (token, event) => {
     await (await database)
       .get('users')
       .find({ token })
-      .assignWith({ history: { event, ts } }, (current, value) => [
-        ...current,
-        value,
-      ])
+      .assignWith({ history: { event, ts } }, (current, value) =>
+        uniqWith(
+          [...current, value],
+          (a, b) => a.event === b.event && a.ts === b.ts,
+        ),
+      )
       .write();
   }
 
