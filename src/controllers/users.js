@@ -8,12 +8,12 @@ import * as User from '../models/user.js';
 const router = express.Router();
 
 router.get('/:name/register', async (request, response) => {
-  const { name } = request.params;
+  const name = request.params.name.toLowerCase();
 
   let user = await User.get({ name });
 
   if (!user) {
-    user = await User.add({ name: name.toLowerCase(), token: nanoid(6) });
+    user = await User.add({ name, token: nanoid(6) });
   }
 
   const origin = url.format({
