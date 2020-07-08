@@ -1,5 +1,6 @@
 import express from 'express';
 import { nanoid } from 'nanoid';
+import emoji from 'node-emoji';
 import qrcode from 'qrcode';
 import url from 'url';
 
@@ -58,7 +59,9 @@ router.get('/:token/check-in', async (request, response) => {
   response.send(`
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <div class="container mx-auto p-4">
-      <div class="text-center text-2xl border border-gray-900 p-4 rounded">Check-in logged. Thank you.</div>
+      <div class="text-center text-2xl border border-gray-900 p-4 rounded">Check-in successful. Thank you ${emoji.get(
+        'heart',
+      )}.</div>
     </div>
   `);
 });
@@ -74,7 +77,9 @@ router.get('/:token/check-out', async (request, response) => {
   response.send(`
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <div class="container mx-auto p-4">
-      <div class="text-center text-2xl border border-gray-900 p-4 rounded">Check-out logged. Thank you.</div>
+      <div class="text-center text-2xl border border-gray-900 p-4 rounded">Check-out successful. Thank you ${emoji.get(
+        'heart',
+      )}.</div>
     </div>
   `);
 });
