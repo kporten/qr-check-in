@@ -6,13 +6,13 @@
   "description": "Service to check-in/out with a personal QR code",
   "repository": "https://github.com/kporten/qr-check-in.git",
   "author": "Kevin Porten <hello@kevinporten.dev>",
-  "type": "module",
   "scripts": {
-    "start": "node ./src/server.js",
-    "watch": "nodemon ./src/server.js -e js",
+    "start": "nodemon ./src/server.js -e js",
     "lint": "eslint --ignore-path .gitignore --ext .js .",
     "commit": "git-cz"
   },
+  "type": "module",
+  "main": "./src/server.js",
   "dependencies": {
     "express": "^4.17.1",
     "helmet": "^3.23.3",
@@ -21,24 +21,24 @@
     "moment": "^2.27.0",
     "nanoid": "^3.1.10",
     "node-emoji": "^1.10.0",
-    "pino": "^6.3.2",
+    "pino": "^6.4.1",
     "pino-http": "^5.2.0",
     "qrcode": "^1.4.4"
   },
   "devDependencies": {
-    "@commitlint/cli": "^9.0.1",
-    "@commitlint/config-conventional": "^9.0.1",
+    "@commitlint/cli": "^9.1.1",
+    "@commitlint/config-conventional": "^9.1.1",
     "commitizen": "^4.1.2",
     "cz-conventional-changelog": "^3.2.0",
-    "eslint": "~7.4.0",
+    "eslint": "~7.5.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-unicorn": "^20.1.0",
+    "eslint-plugin-unicorn": "^21.0.0",
     "husky": "^4.2.5",
     "json2csv": "^5.0.1",
     "nodemon": "^2.0.4",
-    "pino-pretty": "^4.0.0"
+    "pino-pretty": "^4.1.0"
   }
 }
