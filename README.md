@@ -41,7 +41,7 @@ pm2 save
 ## Endpoints
 
 ```sh
-/users/:name/register
+/users/register?name=[your-name]
 /users/:token/check-in
 /users/:token/check-out
 ```
