@@ -7,7 +7,7 @@
   "repository": "https://github.com/kporten/qr-check-in.git",
   "author": "Kevin Porten <hello@kevinporten.dev>",
   "scripts": {
-    "start": "nodemon ./src/server.js -e js",
+    "start": "nodemon ./src/server.js -e js,pug",
     "lint": "eslint --ignore-path .gitignore --ext .js .",
     "commit": "git-cz"
   },
@@ -23,6 +23,7 @@
     "node-emoji": "^1.10.0",
     "pino": "^6.4.1",
     "pino-http": "^5.2.0",
+    "pug": "^3.0.0",
     "qrcode": "^1.4.4"
   },
   "devDependencies": {
