@@ -1,6 +1,6 @@
 {
   "name": "qr-check-in",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "private": true,
   "license": "MIT",
   "description": "Service to check-in/out with a personal QR code",
