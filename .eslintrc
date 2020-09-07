@@ -1,14 +1,27 @@
-// https://www.npmjs.com/package/eslint-config-airbnb-base
+// https://github.com/iamturns/eslint-config-airbnb-typescript
 {
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
   "extends": [
-    "airbnb-base",
+    "airbnb-typescript/base",
+    "plugin:@typescript-eslint/recommended",
     "plugin:promise/recommended",
     "plugin:unicorn/recommended",
     "prettier",
+    "prettier/@typescript-eslint",
     "prettier/unicorn"
   ],
   "rules": {
-    "import/extensions": ["error", "never", { "js": "always" }],
-    "unicorn/no-fn-reference-in-iterator": "off"
+    "no-param-reassign": [
+      "error",
+      {
+        "props": true,
+        "ignorePropertyModificationsFor": ["draft"]
+      }
+    ],
+    "unicorn/no-fn-reference-in-iterator": "off",
+    "unicorn/no-null": "off"
   }
 }

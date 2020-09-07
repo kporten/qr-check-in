@@ -5,8 +5,12 @@
 .clinic
 *.log
 
+# production
+/dist
+
 # misc
 .DS_Store
 .env
-*.json
-!package.json
+
+# resources
+database.json

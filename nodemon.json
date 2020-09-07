@@ -1,0 +1,6 @@
+{
+  "execMap": {
+    "ts": "babel-node --extensions .ts"
+  },
+  "ext": ".pug,.js,.ts"
+}

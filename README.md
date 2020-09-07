@@ -26,6 +26,15 @@ Start the server and restart on changes automatically.
 yarn start
 ```
 
+Other scripts...
+
+```sh
+yarn build # build production-ready app
+yarn lint # lint code with eslint
+yarn type-check # run type check for files
+yarn commit # commitizen friendly commit helper
+```
+
 ## Production
 
 I recommend [PM2](https://pm2.keymetrics.io/) to help you manage and keep your application online.
@@ -34,14 +43,14 @@ I recommend [PM2](https://pm2.keymetrics.io/) to help you manage and keep your a
 
 ```sh
 pm2 startup
-pm2 start ./src/server.js --name qr-check-in
+pm2 start ./dist/app.cjs.js --name qr-check-in
 pm2 save
 ```
 
 ## Endpoints
 
 ```sh
-/users/register?name=[your-name]
-/users/:token/check-in
-/users/:token/check-out
+/api/v1/users/register?name=[your-name]
+/api/v1/users/:token/check-in
+/api/v1/users/:token/check-out
 ```

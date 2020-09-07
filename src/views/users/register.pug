@@ -1,13 +1,13 @@
 extends ../layout
 
 block content
-  h1.text-4xl.py-4.text-center(class="lg:text-left") #{user.name}
-  .space-y-10(class="lg:flex lg:space-x-10 lg:space-y-0")
+  h1.text-4xl.py-4.text-center #{user.name}
+  .space-y-10(class="lg:flex lg:justify-center lg:space-x-10 lg:space-y-0")
     .text-center.border.border-gray-900.p-4.rounded
       h2.text-2xl Check-in
-      img.inline(src=qr.checkIn alt=user.name)
-      p #{address.checkIn}
+      img.inline(src=qr.checkInQr alt=user.name)
+      p #{qr.checkInUrl}
     .text-center.border.border-gray-900.p-4.rounded
       h2.text-2xl Check-out
-      img.inline(src=qr.checkOut alt=user.name)
-      p #{address.checkOut}
+      img.inline(src=qr.checkOutQr alt=user.name)
+      p #{qr.checkOutUrl}
