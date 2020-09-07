@@ -5,9 +5,9 @@ import helmet from 'helmet';
 import path from 'path';
 import pinoHttp from 'pino-http';
 
-import type { Database } from './database';
+import api from '@api';
 
-import api from '../api';
+import type { Database } from './database';
 
 export default ({
   app,

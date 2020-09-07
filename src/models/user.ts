@@ -1,6 +1,6 @@
 import { nanoid } from 'nanoid';
 
-import type { Database } from '../loaders/database';
+import type { Database } from '@loaders/database';
 
 export type User = {
   id: string;

@@ -1,6 +1,6 @@
 import { Router } from 'express';
 
-import type { Database } from '../loaders/database';
+import type { Database } from '@loaders/database';
 
 import users from './routes/users';
 

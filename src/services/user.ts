@@ -4,10 +4,10 @@ import moment from 'moment';
 import { nanoid } from 'nanoid';
 import qrcode from 'qrcode';
 
-import type { User, UserHistory } from '../models/user';
+import type { User, UserHistory } from '@models/user';
 
-import config from '../config';
-import UserModel from '../models/user';
+import config from '@config';
+import UserModel from '@models/user';
 
 class UserService {
   #userModel: UserModel;

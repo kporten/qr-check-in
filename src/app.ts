@@ -1,7 +1,7 @@
 import express from 'express';
 
-import config from './config';
-import loaders from './loaders';
+import config from '@config';
+import loaders from '@loaders';
 
 const startApp = async () => {
   const app = express();

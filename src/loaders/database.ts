@@ -2,9 +2,9 @@ import low from 'lowdb';
 import FileAsync from 'lowdb/adapters/FileAsync';
 import path from 'path';
 
-import type { User } from '../models/user';
+import type { User } from '@models/user';
 
-import config from '../config';
+import config from '@config';
 
 export const databaseUrl = path.resolve(config.DATABASE_URL, './database.json');
 

@@ -2,10 +2,10 @@ import { Router } from 'express';
 import emoji from 'node-emoji';
 import url from 'url';
 
-import type { Database } from '../../loaders/database';
+import type { Database } from '@loaders/database';
 
-import UserModel from '../../models/user';
-import UserService from '../../services/user';
+import UserModel from '@models/user';
+import UserService from '@services/user';
 
 const route = Router();
 
